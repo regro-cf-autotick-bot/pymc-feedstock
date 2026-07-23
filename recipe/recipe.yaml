@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   python_min: "3.12"
-  version: "6.1.0"
+  version: "6.2.0"
 
 recipe:
   # Add -suite to work around <https://github.com/conda/conda-build/issues/3933>
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/p/pymc/pymc-${{ version }}.tar.gz
-  sha256: 46b373387e4dc18d2df4be4ca48794effe3f8348a912d34c0f5955700d92a66b
+  sha256: ae6aafe14992cbabcf577026f0f1fa66f9876d0d216bf58cbf85a5ac6e537b64
 
 build:
   number: 0
@@ -37,7 +37,7 @@ outputs:
         - cloudpickle
         - numpy >=1.25.0
         - pandas >=0.24.0
-        - pytensor-base >=3.1.2,<3.2
+        - pytensor-base >=3.2.2,<3.3
         - rich >=13.7.1
         - scipy >=1.4.1
         - threadpoolctl >=3.1.0,<4.0.0
