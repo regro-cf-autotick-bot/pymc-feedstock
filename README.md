@@ -41,31 +41,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pymc, pymc-base` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pymc pymc-base
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pymc pymc-base
 ```
 
-It is possible to list all of the versions of `pymc` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pymc pymc-base
+# for installing globally
+pixi global install pymc pymc-base
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pymc` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pymc --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pymc --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pymc --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +119,8 @@ mamba repoquery whoneeds pymc --channel conda-forge
 # List dependencies of `pymc`:
 mamba repoquery depends pymc --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -147,6 +191,7 @@ Feedstock Maintainers
 
 * [@ericmjl](https://github.com/ericmjl/)
 * [@fonnesbeck](https://github.com/fonnesbeck/)
+* [@jessegrabowski](https://github.com/jessegrabowski/)
 * [@maresb](https://github.com/maresb/)
 * [@michaelosthege](https://github.com/michaelosthege/)
 * [@ocefpaf](https://github.com/ocefpaf/)
